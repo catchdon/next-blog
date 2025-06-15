@@ -1,27 +1,28 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import { getSortedPostsData } from '../lib/posts'
+import { getAllPosts } from '../lib/posts'
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const posts = getAllPosts()
+
   return {
     props: {
-      allPostsData,
+      posts,
     },
   }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ posts }) {
   return (
-    <div>
-      <Head>
-        <title>나의 Next 블로그</title>
-      </Head>
-      <h1>블로그 글 목록</h1>
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">블로그 글 목록</h1>
       <ul>
-        {allPostsData.map(({ id, title, date }) => (
-          <li key={id}>
-            <Link href={`/blog/${id}`}>{title}</Link> ({date})
+        {posts.map((post) => (
+          <li key={post.slug} className="mb-6">
+            <Link href={`/posts/${post.slug}`} className="text-xl font-semibold text-blue-600 hover:underline">
+              {post.title}
+            </Link>
+            <p className="text-sm text-gray-500">{post.date}</p>
+            <p className="text-base">{post.summary}</p>
           </li>
         ))}
       </ul>
