@@ -1,8 +1,6 @@
 import { remark } from 'remark'
 import html from 'remark-html'
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
+const { getAllPosts, getPostBySlug } = require('../../lib/posts')
 
 export async function getStaticPaths() {
   const posts = getAllPosts()
@@ -16,26 +14,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const fs = require('fs')
-  const path = require('path')
-  const matter = require('gray-matter')
-
-  const fullPath = path.join(process.cwd(), 'posts', `${params.slug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const matterResult = matter(fileContents)
+  const post = getPostBySlug(params.slug)
 
   const processedContent = await remark()
     .use(html)
-    .process(matterResult.content)
+    .process(post.content)
   const contentHtml = processedContent.toString()
 
   return {
     props: {
       post: {
-        title: matterResult.data.title || '',
-        date: matterResult.data.date
-          ? new Date(matterResult.data.date).toISOString()
-          : null,
+        title: post.title || '',
+        date: post.date,
         contentHtml,
       },
     },
