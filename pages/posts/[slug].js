@@ -1,6 +1,8 @@
-const { getAllPosts, getPostBySlug } = require('../../lib/posts')
-const { remark } = require('remark')
-const html = require('remark-html')
+import { remark } from 'remark'
+import html from 'remark-html'
+const fs = require('fs')
+const path = require('path')
+const matter = require('gray-matter')
 
 export async function getStaticPaths() {
   const posts = getAllPosts()
