@@ -1,8 +1,8 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { remark } from 'remark'
-import html from 'remark-html'
+const fs = require('fs')
+const path = require('path')
+const matter = require('gray-matter')
+const { remark } = require('remark')
+const html = require('remark-html')
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'))
