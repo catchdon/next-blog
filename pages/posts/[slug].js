@@ -15,19 +15,26 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug)
-  const processedContent = await remark().use(html).process(post.content)
-  const contentHtml = processedContent.toString()
-
-  return {
-    props: {
-      post: {
-        ...post,
+    const fullPath = path.join(process.cwd(), 'posts', `${params.id}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+  
+    const matterResult = matter(fileContents)
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content)
+    const contentHtml = processedContent.toString()
+  
+    return {
+      props: {
+        title: matterResult.data.title || '',
+        // ✅ 반드시 문자열로 변환
+        date: matterResult.data.date
+          ? new Date(matterResult.data.date).toISOString()
+          : null,
         contentHtml,
       },
-    },
+    }
   }
-}
 
 export default function Post({ post }) {
   return (
