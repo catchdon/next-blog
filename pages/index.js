@@ -1,31 +1,17 @@
-import Link from 'next/link'
-import { getAllPosts } from '../lib/posts'
+import Header from '../components/header'
+import FeaturedSection from '../components/featured-section'
+import BannerAd from '../components/banner-ad'
+import ArticleGrid from '../components/article-grid'
 
-export async function getStaticProps() {
-  const posts = getAllPosts()
-
-  return {
-    props: {
-      posts,
-    },
-  }
-}
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">블로그 글 목록</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug} className="mb-6">
-            <Link href={`/posts/${post.slug}`} className="text-xl font-semibold text-blue-600 hover:underline">
-              {post.title}
-            </Link>
-            <p className="text-sm text-gray-500">{post.date}</p>
-            <p className="text-base">{post.summary}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main className="max-w-screen-xl mx-auto px-4 py-8 space-y-8">
+        <FeaturedSection />
+        <BannerAd />
+        <ArticleGrid />
+      </main>
     </div>
   )
 }
