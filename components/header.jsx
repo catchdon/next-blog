@@ -67,7 +67,7 @@ export default function Header() {
               <Link
                 href="/"
                 className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
-                Home
+                홈
               </Link>
               {categories.map((category) => (
                 <Link
@@ -77,15 +77,11 @@ export default function Header() {
                   {category.name}
                 </Link>
               ))}
-              <Link
-                href="/reviews"
-                className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
-                Reviews
-              </Link>
+
               <Link
                 href="/news"
                 className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
-                News
+                뉴스
               </Link>
             </div>
           </div>
