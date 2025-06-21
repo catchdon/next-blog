@@ -1,14 +1,17 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Gamepad2 } from "lucide-react"
+import Image from 'next/image'
+
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const categories = [
-    { name: "PC Games", href: "/pc-games" },
-    { name: "Mobile Games", href: "/mobile-games" },
-    { name: "Console Games", href: "/console-games" },
+    { name: "PC 게임", href: "/pc-games" },
+    { name: "모바일 게임", href: "/mobile-games" },
+    { name: "콘솔 게임", href: "/console-games" },
   ]
 
   return (
@@ -17,8 +20,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Gamepad2 className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">GameHub</span>
+            <Image
+              src="/gameprofessor-logo.png"
+              alt="게임교수 로고"
+              width={40}
+              height={40}
+              priority
+            />
+            <span className="text-2xl font-bold text-gray-900">게임교수</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -26,7 +35,7 @@ export default function Header() {
             <Link
               href="/"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Home
+              홈
             </Link>
             {categories.map((category) => (
               <Link
@@ -37,14 +46,9 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/reviews"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Reviews
-            </Link>
-            <Link
               href="/news"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              News
+              뉴스
             </Link>
           </nav>
 
