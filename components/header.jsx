@@ -1,12 +1,13 @@
 import Link from "next/link"
-import { useState } from "react"
-import { Menu, X, Gamepad2 } from "lucide-react"
-import Image from 'next/image'
-
-
+import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showHeader, setShowHeader] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   const categories = [
     { name: "PC 게임", href: "/pc-games" },
@@ -14,8 +15,43 @@ export default function Header() {
     { name: "콘솔 게임", href: "/console-games" },
   ]
 
+  useEffect(() => {
+    // 초기 화면 크기 체크
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768) // md 이하만 모바일로 간주
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  useEffect(() => {
+    if (!isMobile) return
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setShowHeader(false)
+      } else {
+        setShowHeader(true)
+      }
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [lastScrollY, isMobile])
+
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
+    <header
+        className={`z-50 w-full transition-transform duration-300 bg-white shadow-sm border-b border-gray-100
+          ${isMobile 
+            ? `fixed top-0 ${showHeader ? "translate-y-0" : "-translate-y-full"}` 
+            : "sticky top-0"
+          }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -32,22 +68,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link
-              href="/"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               홈
             </Link>
             {categories.map((category) => (
               <Link
                 key={category.name}
                 href={category.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
                 {category.name}
               </Link>
             ))}
-            <Link
-              href="/news"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/news" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               뉴스
             </Link>
           </nav>
@@ -55,7 +88,8 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+          >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -64,23 +98,19 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-3">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
                 홈
               </Link>
               {categories.map((category) => (
                 <Link
                   key={category.name}
                   href={category.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
+                  className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1"
+                >
                   {category.name}
                 </Link>
               ))}
-
-              <Link
-                href="/news"
-                className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
+              <Link href="/news" className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1">
                 뉴스
               </Link>
             </div>
@@ -88,5 +118,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

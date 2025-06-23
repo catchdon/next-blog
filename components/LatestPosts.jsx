@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import Pagination from "./Pagination"
-import { timeAgo } from '@/lib/utils/timeAgo'
+import { formatDistanceToNow } from "date-fns"
+import { ko } from "date-fns/locale"
 
 export default function LatestPosts({ posts, currentPage, setCurrentPage }) {
   const postsPerPage = 10
@@ -14,25 +15,24 @@ export default function LatestPosts({ posts, currentPage, setCurrentPage }) {
   const currentPosts = posts.slice(start, end)
   const totalPages = Math.ceil((posts.length - 6) / postsPerPage) + 1
 
-  // ✅ 페이지 바뀔 때 자동 스크롤 함수
   const handlePageChange = (page) => {
     setCurrentPage(page)
     setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-    }, 50) // DOM 업데이트 후 실행
-}
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 50)
+  }
 
   return (
     <>
       <div className="space-y-6">
         {currentPosts.map((post) => (
           <Link
-            key={post.id}
-            href={post.href}
+            key={`${post.category}-${post.slug}`}
+            href={`/${post.category}/${post.slug}`}
             className="flex flex-col md:flex-row gap-4 border-b pb-6">
             <div className="relative w-full md:w-1/3 h-48 rounded overflow-hidden">
               <Image
-                src={post.image}
+                src={post.image || "/default-image.jpg"}
                 alt={post.title}
                 fill
                 className="object-cover"
@@ -46,13 +46,17 @@ export default function LatestPosts({ posts, currentPage, setCurrentPage }) {
               <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
                 {post.description}
               </p>
-              <p className="text-xs text-gray-500">{timeAgo(post.date)}</p>
+              <p className="text-xs text-gray-500">
+                {formatDistanceToNow(new Date(post.date), {
+                  addSuffix: true,
+                  locale: ko,
+                })}
+              </p>
             </div>
           </Link>
         ))}
       </div>
 
-      {/* ✅ 페이지네이션에 스크롤 포함된 핸들러 전달 */}
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
