@@ -13,7 +13,7 @@ export default function HeroPosts({ posts }) {
           className="relative block w-full h-64 md:h-80 rounded-xl overflow-hidden group"
         >
           <Image
-            src={post.image || "/default-image.jpg"}
+            src={post.thumbnail || "/default-image.jpg"}
             alt={post.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"

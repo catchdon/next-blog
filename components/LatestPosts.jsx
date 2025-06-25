@@ -32,7 +32,7 @@ export default function LatestPosts({ posts, currentPage, setCurrentPage }) {
             className="flex flex-col md:flex-row gap-4 border-b pb-6">
             <div className="relative w-full md:w-1/3 h-48 rounded overflow-hidden">
               <Image
-                src={post.image || "/default-image.jpg"}
+                src={post.thumbnail || "/default-image.jpg"}
                 alt={post.title}
                 fill
                 className="object-cover"

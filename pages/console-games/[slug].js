@@ -3,6 +3,7 @@ import html from 'remark-html'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import { format } from 'date-fns'
 import { ko } from 'date-fns/locale'
+import remarkGfm from 'remark-gfm'
 
 
 export async function getStaticPaths() {
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = getPostBySlug('console-games', params.slug)
 
-  const processedContent = await remark().use(html).process(post.content)
+  const processedContent = await remark().use(remarkGfm).use(html).process(post.content)
   const contentHtml = processedContent.toString()
 
   return {
@@ -40,10 +41,7 @@ export default function ConsoleGamePost({ post }) {
       <p className="text-sm text-gray-500 mb-8">
         {format(new Date(post.date), 'yyyy년 M월 d일', { locale: ko })}
       </p>
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-      />
+      <div className="markdown prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </div>
   )
 }

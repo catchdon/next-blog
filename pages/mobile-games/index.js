@@ -1,10 +1,19 @@
 import HeroPosts from '@/components/HeroPosts'
 import MidPosts from '@/components/MidPosts'
 import LatestPosts from '@/components/LatestPosts'
-import posts from '@/lib/sample-posts'
+import { getPostsByCategory } from '@/lib/posts' // ✅ 올바른 함수 import
 import { useState } from 'react'
 
-export default function MobileGamesPage() {
+export async function getStaticProps() {
+  const posts = getPostsByCategory('mobile-games') // ✅ 인자 있는 함수 사용
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+
+export default function MobileGamesPage({ posts }) {
   const [currentPage, setCurrentPage] = useState(1)
 
   return (

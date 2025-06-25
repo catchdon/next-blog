@@ -14,7 +14,7 @@ export default function MidPosts({ posts }) {
         >
           <div className="relative w-full h-36">
             <Image
-              src={post.image || "/default-image.jpg"}
+              src={post.thumbnail || "/default-image.jpg"}
               alt={post.title}
               fill
               className="object-cover"
