@@ -50,7 +50,7 @@ export default function SearchPage({ query, results }) {
   return (
     <>
       <Head>
-        <title>검색 결과: "{query}"</title>
+        <title>{`검색 결과: "${query}"`}</title>
         <meta name="robots" content="noindex, nofollow" />
         <script
           type="application/ld+json"
@@ -60,7 +60,7 @@ export default function SearchPage({ query, results }) {
 
       <div className="max-w-3xl mx-auto p-6">
         <h1 className="text-2xl font-bold mb-4">
-          검색 결과: "{query}"
+          {`검색 결과: "${query}"`}
         </h1>
 
         {results.length === 0 ? (
