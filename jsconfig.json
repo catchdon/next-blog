@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",       // ✅ 이걸 꼭 넣어야 안정됨!
     "paths": {
       "@/*": ["./*"]
     }

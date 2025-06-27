@@ -82,7 +82,7 @@ a:hover {
 
 /* 이미지 */
 .markdown img {
-  @apply rounded-xl shadow-md my-6 mx-auto w-[80%] max-w-[600px] aspect-[16/9] object-cover;
+  @apply rounded-xl shadow-md my-6 mx-auto w-[90%] max-w-[600px] aspect-[16/9] object-cover;
 }
 
 @layer base {
