@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import Header from '../components/header'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -24,6 +25,7 @@ export default function MyApp({ Component, pageProps }) {
       <Header />
       <main className="pt-16">
         <Component {...pageProps} />
+      <Analytics />
       </main>
     </>
   )
