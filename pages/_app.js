@@ -6,16 +6,23 @@ import Header from '../components/header'
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* ✅ 구글 서치콘솔 메타 태그 추가 */}
+      {/* ✅ 글로벌 메타태그 (서치콘솔) */}
       <Head>
+        {/* 구글 서치콘솔 */}
         <meta
           name="google-site-verification"
           content="HiQmaNeBWMOzhfrWytGV0iE6-QdNR_Pn6DT7k_hFxI0"
         />
+        
+        {/* ✅ 네이버 서치콘솔 */}
+        <meta
+          name="naver-site-verification"
+          content="25f08956b2e4471f930ce3ab0fefa05345018d01"
+        />
       </Head>
 
-      <Header /> {/* ✅ 모든 페이지에 상단 메뉴 고정 */}
-      <main className="pt-16"> {/* ⬅️ 헤더 높이만큼 padding 추가 */}
+      <Header />
+      <main className="pt-16">
         <Component {...pageProps} />
       </main>
     </>

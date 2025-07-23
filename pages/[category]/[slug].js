@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm'
 import { format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import Image from 'next/image'
-import Head from 'next/head' // ✅ Head 추가
+import Head from 'next/head'
 
 export async function getStaticPaths() {
   const posts = getAllPosts()
@@ -34,6 +34,8 @@ export async function getStaticProps({ params }) {
       post: {
         title: post.title || '',
         date: post.date,
+        summary: post.summary || '',            // ✅ 추가
+        thumbnail: post.thumbnail || '',        // ✅ 추가
         contentHtml,
         slug,
         category,
@@ -43,38 +45,62 @@ export async function getStaticProps({ params }) {
 }
 
 export default function PostPage({ post }) {
-  const fullUrl = `https://yourdomain.com/${post.category}/${post.slug}` // ✅ 실제 도메인으로 수정
+  const fullUrl = `https://www.unemployedprofessor.me/${post.category}/${post.slug}`
   const publishDate = format(new Date(post.date), 'yyyy-MM-dd')
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
+    "description": post.summary || post.title,
     "datePublished": publishDate,
     "author": {
       "@type": "Person",
       "name": "게임교수",
-      "url": "https://www.unemployedprofessor.me/author" // 필요시 작성자 소개 페이지
+      "url": "https://www.unemployedprofessor.me/author"
     },
     "publisher": {
       "@type": "Organization",
       "name": "게임교수",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.unemployedprofessor.me/gameprofessor-logo.png" // public 경로 또는 절대 URL
+        "url": "https://www.unemployedprofessor.me/gameprofessor-logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": fullUrl
     },
-    "url": fullUrl
+    "url": fullUrl,
+    ...(post.thumbnail && {
+      "image": `https://www.unemployedprofessor.me${post.thumbnail}`
+    })
   }
 
   return (
     <div className="max-w-3xl mx-auto p-6">
       <Head>
         <title>{post.title} | 게임교수</title>
+        <meta name="description" content={post.summary || post.title} />
+        <link rel="canonical" href={fullUrl} />
+
+        {/* OG 메타 */}
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.summary || post.title} />
+        <meta property="og:url" content={fullUrl} />
+        {post.thumbnail && (
+          <meta property="og:image" content={`https://www.unemployedprofessor.me${post.thumbnail}`} />
+        )}
+
+        {/* Twitter 메타 */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.summary || post.title} />
+        {post.thumbnail && (
+          <meta name="twitter:image" content={`https://www.unemployedprofessor.me${post.thumbnail}`} />
+        )}
+
+        {/* 구조화 데이터 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
