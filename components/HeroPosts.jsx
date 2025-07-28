@@ -17,6 +17,9 @@ export default function HeroPosts({ posts }) {
             alt={post.title}
             priority
             fill
+            quality={80}
+            sizes="(max-width: 768px) 100vw, 50vw"
+
             className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-300" />
