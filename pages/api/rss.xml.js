@@ -22,6 +22,7 @@ export default function handler(req, res) {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const files = getAllMarkdownFiles(postsDirectory);
 
+  // 1. 파일별 메타 추출
   const posts = files.map((filePath) => {
     const slug = filePath
       .replace(postsDirectory + path.sep, '')
@@ -38,6 +39,10 @@ export default function handler(req, res) {
     return { title, slug, category, excerpt, contentHtml, pubDate };
   });
 
+  // 2. pubDate 기준 내림차순 정렬 (최신 글이 위로)
+  posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+  // 3. RSS XML 생성
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
@@ -62,6 +67,7 @@ export default function handler(req, res) {
   </channel>
 </rss>`;
 
+  // 4. 응답
   res.setHeader('Content-Type', 'application/rss+xml; charset=utf-8');
   res.status(200).send(rss);
 }
