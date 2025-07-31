@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="ko">
       <Head>
+        <meta name="google-adsense-account" content="ca-pub-2232732758246542"></meta>
         {/* 기본 파비콘 */}
         <link rel="icon" href="/favicon.ico" />
 
