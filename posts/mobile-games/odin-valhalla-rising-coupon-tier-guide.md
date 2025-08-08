@@ -8,8 +8,6 @@ thumbnail: "/images/mobile-games/odin-valhalla-rising-coupon-tier-guide_v55d.jpg
 
 ![오딘: 발할라 라이징 쿠폰번호](/images/mobile-games/odin-valhalla-rising-coupon-tier-guide_1_8gp0.jpg)
 
-# 오딘: 발할라 라이징 – 쿠폰번호, 등급, 티어, 그리고 공략 총정리!
-
 요즘 "오딘: 발할라 라이징"이 진짜 핫한 게임이라는 거, 다들 한 번쯤 들어보셨죠? 저는 출시 초기부터 쭉 플레이하고 있는데, 놀라운 그래픽과 깊이 있는 세계관에 진짜 푹 빠졌습니다! 오늘은 이 게임에서 유용한 쿠폰번호, 등급/티어 정보, 그리고 제가 직접 경험한 공략 노하우까지 아낌없이 공유해볼게요.
 
 ## 오딘: 발할라 라이징 – 이 게임이 특별한 이유

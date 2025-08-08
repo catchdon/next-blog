@@ -34,8 +34,6 @@ isFeatured: "true"
 
 ![가디스오더 쿠폰번호, 공략, 티어 본문 시작 이미지](/images/mobile-games/goddess-order-coupon-guide_7wauj_2.jpg)
 
-# 가디스오더(가이더스) 쿠폰번호&코드 총정리: 사전예약, 출시일, 실전 팁까지
-
 > “진짜, 이 정도로 쿠폰 퍼주는 게임 또 있을까?”  
 > - 유저 A, 2025.05. 커뮤니티 후기 중
 

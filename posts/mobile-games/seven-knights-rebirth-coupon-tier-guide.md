@@ -30,10 +30,6 @@ isFeatured: "true"
 
 ![세븐나이츠 리버스 쿠폰번호, 공략, 티어 본문 시작 이미지](/images/mobile-games/seven-knights-rebirth-coupon-tier-guide_0oepf_3.jpg)
 
-# 세븐나이츠 리버스 쿠폰 총정리 & 입력법, 티어표, 영웅 추천까지!  
-_공식/이벤트/공통 쿠폰 & 실전 경험 꿀팁, 오류 해결, 최신 티어표 한방 정리_
-
----
 
 ## 내가 직접 겪은, 세븐나이츠 리버스 쿠폰 실전 경험담
 

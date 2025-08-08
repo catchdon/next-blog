@@ -8,8 +8,6 @@ thumbnail: "/images/mobile-games/royal-match-coupon-tier-guide_jgwo.jpg"
 
 ![로얄 매치 쿠폰번호](/images/mobile-games/royal-match-coupon-tier-guide_1_ybfe.jpg)
 
-# 요즘 진짜 핫한 퍼즐 게임! 로얄 매치(Royal Match) 리뷰 & 쿠폰, 등급, 티어, 공략 총정리
-
 로얄 매치(Royal Match), 한 번쯤 들어보셨죠? 저는 친구 추천으로 가볍게 시작했다가, 지금은 매일 접속 안 하면 하루가 허전해질 정도로 완전 빠져버렸습니다! 퍼즐 게임 팬이라면 무조건 해봐야 할 게임이기도 하고, 쿠폰 번호, 등급, 티어, 그리고 꿀공략까지 한 방에 알려드릴 테니, 글 끝까지 읽어보세요!
 
 ## 로얄 매치(Royal Match) 게임 소개

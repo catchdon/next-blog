@@ -8,7 +8,6 @@ thumbnail: "/images/mobile-games/legend-of-ymir-coupon-tier-guide_nr2i.jpg"
 
 ![레전드 오브 이미르 쿠폰번호](/images/mobile-games/legend-of-ymir-coupon-tier-guide_1_skd4.jpg)
 
-# 레전드 오브 이미르 – 쿠폰, 등급, 티어, 공략, 그리고 모든 것!
 
 여러분, 요즘 '레전드 오브 이미르' 진짜 핫한 거 아시나요? 2025년 2월 20일 위메이드에서 출시한 이 게임, 저도 출시하자마자 바로 뛰어들어봤는데요. 언리얼 엔진 5 기반의 미친 그래픽에다가 북유럽 신화 기반의 세계관, 그리고 MMORPG 특유의 성장과 경쟁… 진짜 안 해볼 수가 없더라고요! 오늘은 레전드 오브 이미르 쿠폰 번호 정리는 물론, 등급/티어, 초보 공략, 다운로드 정보까지 아낌없이 알려드릴게요.
 

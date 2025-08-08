@@ -31,8 +31,7 @@ isFeatured: true
 ---
 
 ![난세표류기 쿠폰번호, 공략, 티어 본문 시작 이미지](/images/mobile-games/nansedrifter-coupon-historic-entry_m19l4_2.jpg)
-
-# 난세표류기 쿠폰 코드 입력 완벽 가이드  
+ 
 _자동사냥, 위인 배치, 밥알의 역사 성장 – 그리고 당신만의 우수한 쿠폰 등록법까지_
 
 ---

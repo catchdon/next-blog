@@ -8,8 +8,6 @@ thumbnail: "/images/mobile-games/last-war-survival-coupon-tier-guide_vqi8.jpg"
 
 ![라스트 워 서바이벌 쿠폰번호](/images/mobile-games/last-war-survival-coupon-tier-guide_1_ucdo.jpg)
 
-# 라스트 워 서바이벌, 요즘 진짜 핫합니다!
-
 제가 직접 플레이해본 좀비 전략 게임, 바로 "라스트 워 서바이벌"! 요즘 이 게임 커뮤니티에서 엄청 화제인데, 실제로 해보면 왜 이렇게 인기 있는지 단번에 알 수 있어요. 좀비 아포칼립스 세계관 속에서 살아남는다는 그 특유의 긴장감! 그리고 쿠폰, 등급, 티어, 꿀팁까지 정말 할 얘기가 많아요. 이 글에서 라스트 워 서바이벌의 모든 것을 솔직하게 풀어볼게요.
 
 ## 라스트 워 서바이벌이란? 한눈에 소개!

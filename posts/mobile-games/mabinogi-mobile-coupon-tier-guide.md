@@ -8,8 +8,6 @@ thumbnail: "/images/mobile-games/mabinogi-mobile-coupon-tier-guide_jk0a.jpg"
 
 ![마비노기 모바일 쿠폰번호](/images/mobile-games/mabinogi-mobile-coupon-tier-guide_1_4cpx.jpg)
 
-# 마비노기 모바일, 진짜 이건 해봐야 해!
-
 요즘 모바일게임계에서 이슈의 중심에 있는 게임, 바로 ‘마비노기 모바일’입니다. 저는 원작 마비노기를 정말 좋아했던 사람으로서 이번 모바일 버전 소식을 듣고 진짜 두근두근했어요. 제 경험담, 쿠폰, 티어, 등급, 공략까지 하나하나 정리해 드릴게요. 마비노기 모바일, 과연 얼마나 재밌는지, 어떻게 플레이하면 꿀팁을 뽑아먹을 수 있는지 알려드립니다!
 
 ---

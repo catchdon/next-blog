@@ -8,7 +8,6 @@ thumbnail: "/images/mobile-games/lineage2m-coupon-tier-guide_1ran.jpg"
 
 ![리니지2M 쿠폰번호](/images/mobile-games/lineage2m-coupon-tier-guide_1_enhi.jpg)
 
-# 리니지2M: 쿠폰, 등급, 티어, 공략 총정리! 요즘 진짜 이 게임 핫합니다
 
 안녕하세요, 리니지2M 덕후 블로거입니다! 요즘 게임 커뮤니티에서 이 리니지2M 이야기가 하루가 멀다 하고 올라오더라고요. "진짜 이렇게까지 스케일 크게 나와도 되나?" 싶을 정도예요. 직접 몇 달 째 플레이해보면서 느낀 것, 그리고 사람들이 많이 궁금해하는 쿠폰 정보, 등급, 티어, 공략, 필수 꿀팁까지 모두 모아서 정리해봤어요. 저만 알고 있기 아쉬워 꼭 공유하고 싶었습니다!
 

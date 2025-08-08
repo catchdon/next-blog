@@ -8,7 +8,6 @@ thumbnail: "/images/mobile-games/lineagew-coupon-tier-guide_cvxw.jpg"
 
 ![리니지W 쿠폰번호](/images/mobile-games/lineagew-coupon-tier-guide_1_f1lc.jpg)
 
-# 리니지W 쿠폰번호, 등급, 티어, 공략 꿀팁 총정리!
 
 요즘 리니지W, 진짜 핫하죠! 저도 시작한 이후로 밤을 지새울 정도로 푹 빠져 있는데요, 오늘은 리니지W의 쿠폰번호, 등급, 티어, 그리고 공략까지 제가 직접 겪고 정리한 모든 노하우를 한 곳에 담아 공유합니다. ‘아, 이건 진짜 꼭 알아야 해!’ 싶은 정보들만 콕콕 집어 준비했으니 끝까지 집중해 주세요!
 

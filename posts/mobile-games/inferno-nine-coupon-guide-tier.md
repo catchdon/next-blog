@@ -8,8 +8,6 @@ thumbnail: "/images/mobile-games/inferno-nine-coupon-guide-tier_s2wo.jpg"
 
 ![인페르노 나인 쿠폰번호](/images/mobile-games/inferno-nine-coupon-guide-tier_1_3lzx.jpg)
 
-# 인페르노 나인 쿠폰번호, 등급, 티어, 그리고 공략 총정리!
-
 요즘 이 게임 진짜 핫합니다! 바로 "I9: 인페르노 나인"인데요, 최근 오픈 이후 MMORPG 팬들 사이에서 입소문이 제대로 돌고 있더라고요. 조금만 플레이해 봐도 왜 인기가 많은지 알 수 있을 정도로 그래픽, 시스템, 그리고 보상 면에서 정말 만족스럽습니다. 오늘은 인페르노 나인 쿠폰번호, 등급, 티어, 그리고 제 경험담을 한가득 담아 공략까지 몽땅 공유해볼게요.
 
 ## 인페르노 나인: 환상적인 판타지와 직업 라인업
